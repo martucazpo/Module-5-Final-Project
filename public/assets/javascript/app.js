@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const gotoRegisterBtn = document.getElementById("gotoRegisterBtn");
     const loginBtn = document.getElementById("loginBtn");
     const registerBtn = document.getElementById("registerBtn");
+    const loginForm = document.getElementById("loginForm");
+    const registrationForm = document.getElementById("registrationForm");
 
 
     registrationModalAnchor.addEventListener('click', () => {
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     loginNavBtn.addEventListener('click', () => {
-        showHidden(loginDivModal, "hidden", "display");
+        dontPushAgain(loginNavBtn, loginDivModal, registrationDivModal, "display","hidden");
     });
 
     gotoRegisterBtn.addEventListener('click', () => {
@@ -28,10 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loginBtn.addEventListener('click', () => {
         showHidden(loginDivModal, "display", "hidden");
+        loginForm.form.reset();
     });
 
     registerBtn.addEventListener('click', () => {
         showHidden(registrationDivModal, "display", "hidden");
+        registrationForm.form.reset();
     });
 });
 
@@ -41,5 +45,17 @@ function showHidden(div, targetClass1, targetClass2) {
         div.classList.add(targetClass2);
     } else {
         div.setAttribute("Class", targetClass2);
+    }
+}
+
+function dontPushAgain(element, targetDiv1, targetDiv2, targetClass1, targetClass2) {
+    if (targetDiv1.classList.contains(targetClass2) && targetDiv2.classList.contains(targetClass1)){
+        element.removeEventListener('click', () => {});
+        showHidden(targetDiv1, targetClass2, targetClass1);
+        showHidden(targetDiv2, targetClass1, targetClass2);   
+    } else if (targetDiv1.classList.contains(targetClass2)) {
+        showHidden(targetDiv1, targetClass2, targetClass1);
+    } else if (targetDiv1.classList.contains(targetClass1)){
+        element.removeEventListener('click', () => {});
     }
 }

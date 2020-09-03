@@ -5,7 +5,7 @@
                 <span></span></a>
 </div>
     <h1>Register</h1>
-    <form method="POST" action="auth/register/form">
+    <form id="registrationForm" method="POST" action="<%= regAction %>">
         <div class="form-input-div">
             <input type="text" name="name" placeholder="name" required />
         </div>
@@ -13,11 +13,14 @@
             <input type="email" name="email" placeholder="email" required />
         </div>
         <div class="form-input-div">
-            <input type="password" name="password" placeholder="password" required />
-            <input type="password" name="password" placeholder="resubmit password" required />
+            <input type="password" name="password1" placeholder="password" required />
+            <input type="password" name="password2" placeholder="confirm password" required />
         </div>
         <div class="form-input-div form-submit-btn-div">
             <button id="registerBtn" type="submit" class="btn registration-form-submit-btn">Register</button>
         </div>
     </form>
+    <div class="registration-errors-div">
+        <%- include('./errors.ejs') %>
+    </div>
 </div>
