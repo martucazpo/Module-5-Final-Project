@@ -1,3 +1,17 @@
-body {
-    background-color: blueviolet;
+@import './login/registration-login-form.css';
+@import './site/initial-landing.css';
+@import './shared/modal.css';
+
+*, body, html, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
 }
