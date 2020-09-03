@@ -1,6 +1,8 @@
 @import './login/registration-login-form.css';
 @import './site/initial-landing.css';
 @import './shared/modal.css';
+@import './shared/nav.css';
+@import './shared/button.css';
 
 *, body, html, ::before, ::after {
     box-sizing: border-box;

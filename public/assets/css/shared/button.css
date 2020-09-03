@@ -1,0 +1,32 @@
+.btn {
+    font-size: 1.25em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.nav-btn {
+    color: white;
+    background-color: black;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-right: 2em;
+    font-size: 2em;
+}
+
+.nav-btn:hover {
+    background-color: darkgray;
+}
+
+.nav-btn:focus {
+    color: black;
+    background-color: darkgray;
+}

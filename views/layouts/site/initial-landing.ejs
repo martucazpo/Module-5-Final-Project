@@ -1,13 +1,16 @@
 <div class="landing-pg-container">
+<div class="login-nav-div">
+    <%- include('../login/partials/login-nav') %>
+</div>
 <div>
-    <h1>Hello</h1>
+    <h1>Exercise Tracker</h1>
     <a href="/auth/register/test">Test route</a>
 </div>
 <div class="login-registration-container">
-    <div id="registrationDivModal" class="registration-div display">
+    <div id="registrationDivModal" class="registration-div hidden">
         <%- include('../login/partials/register.ejs') %>
     </div>
-    <div id="loginDivModal" class="login-div display">
+    <div id="loginDivModal" class="login-div hidden">
         <%- include('../login/partials/login.ejs') %>
     </div>
 </div>
