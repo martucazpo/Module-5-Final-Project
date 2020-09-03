@@ -1,0 +1,28 @@
+<div class="landing user-landing-container">
+    <div class="exercise-wrapper">
+        <h1>Exercise Tracker</h1>
+        <h2><%= name %></h2>
+        <div class="exercise-form-wrapper">
+            <form class="exercise-form" method="POST" action="">
+                <div class="input-div">
+                    <input type="text" name="exercise" placeholder="Type of Exercise" required />
+                </div>
+                <div class="input-div">
+                    <input type="number" name="quantity" placeholder="How many?" required/>
+                </div>
+                <div class="input-div">
+                    <input type="time" name="duration" placeholder="For how long?" required/>
+                </div>
+                <div class="input-div exercise-input-btn-div">
+                    <button type="submit" id="exerciseInputBtn" class="btn exercise-input-btn">Log Exercise</button>
+                </div>
+                <div class="input-div my-exercises-btn-div">
+                    <button type="button" id="myExercisesBtn" class="btn my-exercises-btn">My Exercise Log</button>
+                </div>
+            </form>
+        </div>
+        <div class="my-exercise-log-div display">
+            <%- include('../partials/my-exercise-log.ejs') %>
+        </div>
+    </div>
+</div>
