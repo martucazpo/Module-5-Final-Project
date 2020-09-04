@@ -20,7 +20,7 @@
             <button id="registerBtn" type="submit" class="btn registration-form-submit-btn">Register</button>
         </div>
     </form>
-    <div class="registration-errors-div">
+    <div id="regErrsDiv" class="registration-errors-div <%= showErrs %>">
         <%- include('./errors.ejs') %>
     </div>
 </div>

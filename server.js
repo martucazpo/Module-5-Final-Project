@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
   const express = require('express');
   const app = express();
   const mongoose = require('mongoose');
+  const flash = require('connect-flash');
   const session = require('express-session');
   const passport = require('passport');
   const expressLayouts = require('express-ejs-layouts');
@@ -12,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
   const PORT = process.env.PORT;
   const SECRET = process.env.SECRET;
   
-  //require('./passport/passport')(passport);
+  require('./passport/passport')(passport);
   
   app.set('view engine', 'ejs');
   app.set('views', __dirname + '/views');
@@ -25,6 +26,13 @@ if (process.env.NODE_ENV !== 'production') {
   }));
   app.use(passport.initialize());
   app.use(passport.session());
+  app.use(flash());
+
+app.use(function (req, res, next) {
+  res.locals.error = req.flash('error');
+  res.locals.success = req.flash('success');
+  next();
+});
   
   app.use(express.urlencoded({
     extended: false

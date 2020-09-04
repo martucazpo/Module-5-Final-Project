@@ -5,7 +5,7 @@
                 <span></span></a>
 </div>
     <h1>Login</h1>
-    <form id="loginForm" method="POST" action="auth/login/sign-in">
+    <form id="loginForm" method="POST" action="<%= logAction %>">
         <div class="form-input-div">
             <input type="email" name="email" placeholder="email" required />
         </div>
@@ -17,4 +17,9 @@
             <button id="gotoRegisterBtn" type="button" class="btn registration-form-submit-btn">Register</button>
         </div>
     </form>
+    <div id="logErrsDiv" class="registration-errors-div <%= showErrs %>">
+      <% if(typeof message !== 'undefined' ) { %>
+          <p><%= message %></p> 
+      <% } %>
+    </div>
 </div>

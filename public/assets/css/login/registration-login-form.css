@@ -33,3 +33,9 @@
     margin-bottom: 1em;
 }
 
+.registration-errors-div {
+    font-size: 1.25em;
+    padding: 1em;
+    background-color: coral;
+}
+
