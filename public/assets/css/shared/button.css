@@ -30,3 +30,17 @@
     color: black;
     background-color: darkgray;
 }
+
+.exercise-input-btn {
+    color: white;
+    background-color: black;
+}
+
+.exercise-input-btn:hover {
+    background-color: darkgray;
+}
+
+.exercise-input-btn:focus {
+    color: black;
+    background-color: darkgray;
+}

@@ -1,0 +1,34 @@
+.exercise-input-btn-div {
+    margin-bottom: 0.75em;
+    margin-top: 1em;
+}
+
+.my-exercises-btn-div {
+    margin-bottom: 1.25em;
+}
+
+.exercise-wrapper {
+    border: 1px solid black;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.my-exercise-log-div {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.exercise-log-container {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+

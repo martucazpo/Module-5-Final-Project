@@ -10,39 +10,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById("loginForm");
     const registrationForm = document.getElementById("registrationForm");
     const regErrsDiv = document.getElementById("regErrsDiv");
+    const logErrsDiv = document.getElementById("logErrsDiv");
 
 
     registrationModalAnchor.addEventListener('click', () => {
         showHidden(registrationDivModal, "display", "hidden");
         showHidden(regErrsDiv, "display", "hidden");
+        showHidden(logErrsDiv, "display", "hidden");
     });
 
     loginModalAnchor.addEventListener('click', () => {
         showHidden(loginDivModal, "display", "hidden");
         showHidden(regErrsDiv, "display", "hidden");
+        showHidden(logErrsDiv, "display", "hidden");
     });
 
     loginNavBtn.addEventListener('click', () => {
         dontPushAgain(loginNavBtn, loginDivModal, registrationDivModal, "display","hidden");
         showHidden(regErrsDiv, "display", "hidden");
+        showHidden(logErrsDiv, "display", "hidden");
     });
 
     gotoRegisterBtn.addEventListener('click', () => {
         showHidden(loginDivModal, "display", "hidden");
         showHidden(registrationDivModal, "hidden", "display");
         showHidden(regErrsDiv, "display", "hidden");
+        showHidden(logErrsDiv, "display", "hidden");
     });
 
     loginBtn.addEventListener('click', () => {
         showHidden(loginDivModal, "display", "hidden");
         loginForm.form.reset();
         showHidden(regErrsDiv, "display", "hidden");
+        showHidden(logErrsDiv, "display", "hidden");
     });
 
     registerBtn.addEventListener('click', () => {
         showHidden(registrationDivModal, "display", "hidden");
         registrationForm.form.reset();
         showHidden(regErrsDiv, "display", "hidden");
+        showHidden(logErrsDiv, "display", "hidden");
     });
 });
 
