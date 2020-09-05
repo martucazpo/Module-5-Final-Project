@@ -14,11 +14,13 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    exercises: [
+        { type: mongoose.Schema.Types.ObjectId, ref: 'Exercise' }
+    ],
     timestamp: {
         type: Date,
         default: Date.now()
     }
 });
 
-// exports template as constructor 'User'
 module.exports = mongoose.model('User', UserSchema);

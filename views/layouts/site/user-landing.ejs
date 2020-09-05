@@ -5,7 +5,7 @@
         <h2><%= name %></h2>
         </div>
         <div class="exercise-form-wrapper">
-            <form class="exercise-form" method="POST" action="">
+            <form class="exercise-form" method="POST" action="/landing/user-exercises/<%= id %>">
                 <div class="form-input-div">
                     <input type="text" name="exercise" placeholder="Type of Exercise" required />
                 </div>
@@ -13,7 +13,7 @@
                     <input type="number" name="quantity" placeholder="How many?" required/>
                 </div>
                 <div class="form-input-div">
-                    <input type="time" name="duration" placeholder="For how long?" required/>
+                    <input type="number" name="duration" placeholder="For how long (in minutes)?" required/>
                 </div>
                 <div class="form-input-div exercise-input-btn-div">
                     <button type="submit" id="exerciseInputBtn" class="btn exercise-input-btn">Log In Exercise</button>
