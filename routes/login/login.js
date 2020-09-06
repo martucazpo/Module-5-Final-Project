@@ -32,5 +32,10 @@ router.post('/sign-in', function (req, res, next) {
     })(req, res, next);
 });
 
+router.get('/sign-out', (req, res) => {
+    req.logout();
+    res.redirect('/');
+});
+
 
 module.exports = router;

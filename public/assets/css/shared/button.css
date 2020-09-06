@@ -44,3 +44,34 @@
     color: black;
     background-color: darkgray;
 }
+
+.exercise-update-btn {
+    font-size: 1em;
+    padding: 0.35em;
+    background-color: black;
+    color: white;
+}
+
+.exercise-update-btn:hover {
+    background-color: darkgray;
+}
+
+.exercise-update-btn:focus {
+    color: black;
+    background-color: darkgray;
+}
+
+.update-exercise-btn, .exercise-delete-btn {
+    margin-bottom: 0.5em;
+    color: white;
+    background-color: black;
+}
+
+.update-exercise-btn:hover, .exercise-delete-btn:hover {
+    background-color: darkgray;
+}
+
+.update-exercise-btn:focus, .exercise-delete-btn:focus {
+    color: black;
+    background-color: darkgray;
+}

@@ -21,9 +21,9 @@
     position: absolute;
     z-index: 10;
 }
-
+/* needs media query */
 .exercise-log-container {
-    margin-top: 8%;
+    margin-top: 10%;
     margin-bottom: 8%;
     background-color: white;
     border: 1px solid black;
@@ -31,5 +31,11 @@
     padding-right: 1em;
     overflow: scroll;
 }
+
+.exercise-update-wrapper {
+    margin-bottom: 1em;
+    border: 1px solid black;
+}
+
 
 

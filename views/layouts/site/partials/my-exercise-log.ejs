@@ -24,8 +24,30 @@
                 <td><%= exercise.type %></td>
                 <td><%= exercise.quantity %></td>
                 <td><%= exercise.duration %></td>
-                <td><button class="btn exercise-update-btn" type="button" href="/landing/exercise-update/<%= exercise._id%>">Edit</button>
+                <td><button id="exerciseEditBtn" class="btn exercise-update-btn" type="button">edit</button><td>
             </tr>
+            <div id="exerciseUpdateModal" class="exercise-update-wrapper hidden">
+                <form method="POST" action="/exerciseUpdate/<%= exercise._id %>">
+                    <div class="form-input-div">
+                        <input type="text" name="type" value="<%= exercise.type %>" />
+                    </div>
+                    <div class="form-input-div">
+                        <input type="number" name="quantity" value="<%= exercise.quantity %>" />
+                    </div>
+                    <div class="form-input-div">
+                        <input type="number" name="duration" value="<%= exercise.duration %>" />
+                    </div>
+                    <div class="form-input-div form-submit-btn-div">
+                        <button type="submit" id="updateExerciseBtn" class="btn update-exercise-btn">Update
+                            Exercise</button>
+                    </div>
+                </form>
+                <div class="form-input-div form-submit-btn-div">
+                    <button type="button" id="exerciseDeleteBtn" class="btn exercise-delete-btn"
+                        onClick="window.location.href='/exerciseUpdate/exercise-delete/<%= exercise._id %>'">Delete
+                        Exercise</button>
+                </div>
+            </div>
             <% }); %>
             <% } %>
         </table>

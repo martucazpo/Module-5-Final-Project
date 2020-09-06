@@ -1,0 +1,20 @@
+<div class="exercise-update-wrapper hidden">
+    <form method="POST" action="">
+        <div class="form-input-div">
+            <input type="text" name="type" placeholder="<%= exercise.type %>" />
+        </div>
+        <div class="form-input-div">
+            <input type="number" name="quantity" placeholder="<%= exercise.quantity %>" />
+        </div>
+        <div class="form-input-div">
+            <input type="number" name="duration" placeholder="<%= exercise.duration %>" />
+        </div>
+        <div class="form-input-div form-submit-btn-div">
+            <button type="submit" id="updateExerciseBtn" class="btn update-exercise-btn">Update Exercise</button>
+        </div>
+    </form>
+    <div class="exercise-delete-btn-div">
+        <button type="button" id="exerciseDeleteBtn" class="btn exercise-delete-btn"
+            onClick="window.location.href='/landing/update/excercise-update/<%= exercise._id %>'">Delete Exercise</button>
+    </div>
+</div>
