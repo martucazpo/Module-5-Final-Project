@@ -5,17 +5,14 @@
             <span></span></a>
     </div>
     <h1>Admin Area</h1>
-    <form id="adminLoginForm" method="POST" action="">
+    <form id="adminLoginForm" method="POST" action="/admin/adminArea/login">
         <div class="form-input-div">
+            <input type="hidden" name="email" value="admin@mail.com" />
             <input type="password" name="password" placeholder="password" required />
         </div>
         <div class="form-input-div form-submit-btn-div">
             <button id="loginBtn" type="submit" class="btn registration-form-submit-btn admin-btn">Login</button>
         </div>
     </form>
-    <div id="logErrsDiv" class="registration-errors-div <%= showErrs %>">
-        <% if(typeof message !== 'undefined' ) { %>
-        <p><%= message %></p>
-        <% } %>
-    </div>
+    
 </div>
