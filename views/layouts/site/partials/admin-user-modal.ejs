@@ -1,0 +1,58 @@
+<div id="userLogContainer" class="modal user-log-container hidden">
+    <div class="modal-anchor-header-wrapper">
+        <div class="header-wrapper">
+            <h2>Users</h2>
+        </div>
+        <div class="close-modal">
+            <a id="userTableModalAnchor" class="modal-anchor" href="#">
+                <span></span>
+                <span></span></a>
+        </div>
+    </div>
+    <div class="user-log-table-wrapper">
+        <table>
+            <tr>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Date Started</th>
+                <th>Exercises</th>
+            </tr>
+            <% if (users.length !== 0) { %>
+            <% users.forEach((user) => { %>
+            <tr>
+                <td>
+                    <button id="userNameBtn" class="btn table-btn user-name-btn"><%= user.name %></button>
+                </td>
+                <td>
+                    <%= user.email %>
+                </td>
+                <td>
+                    <%= moment(user.timestamp).format('LL') %>
+                </td>
+                <td>
+                    <button id="AdminExerciseLogBtn" class="btn admin-exercise-update-btn" type="button" onClick="window.location.href='/admin/adminLanding/exercise-log/<%= user._id %>'">Log</button>
+                </td>
+            </tr>
+            <div id="userUpdateModal" class="user-update-wrapper hidden">
+                <form method="POST" action="/userUpdate/<%= user._id %>">
+                    <div class="form-input-div">
+                        <input type="text" name="name" value="<%= user.name %>" />
+                    </div>
+                    <div class="form-input-div">
+                        <input type="email" name="email" value="<%= user.email %>" />
+                    </div>
+                    <div class="form-input-div form-submit-btn-div">
+                        <button type="submit" id="updateUserBtn" class="btn update-user-btn">Update User</button>
+                    </div>
+                </form>
+                <div class="form-input-div form-submit-btn-div">
+                    <button type="button" id="userDeleteBtn" class="btn user-delete-btn"
+                        onClick="window.location.href='/exerciseUpdate/exercise-delete/<%= user._id %>'">Delete
+                        User</button>
+                </div>
+            </div>
+            <% }); %>
+            <% } %>
+        </table>
+    </div>
+</%>

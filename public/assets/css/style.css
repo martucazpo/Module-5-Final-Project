@@ -6,6 +6,7 @@
 @import './site/user-landing.css';
 @import './shared/header.css';
 @import './shared/table.css';
+@import './site/admin.css';
 
 *, body, html, ::before, ::after {
     box-sizing: border-box;

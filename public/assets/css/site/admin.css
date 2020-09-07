@@ -1,0 +1,43 @@
+.user-log-container {
+    margin-top: 10%;
+    margin-bottom: 8%;
+    width: 50%;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.user-log-table-wrapper {
+    border: 1px solid black;
+    width: 100%;
+    overflow: scroll;
+}
+
+.user-log-table-wrapper > table {
+    border: none;
+    padding: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+.modal-anchor-header-wrapper {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-anchor-header-wrapper > .close-modal {
+    padding: none;
+    margin: none;
+}
+
+@media only screen and (max-width: 950px) {
+    .user-log-container {
+        margin-top: 20%;
+        margin-bottom: 17%;
+        width: 100%;
+    }
+}

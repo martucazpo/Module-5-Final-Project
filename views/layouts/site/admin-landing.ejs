@@ -1,1 +1,6 @@
-<h1>Admin Landing</h1>
+<%- include('./partials/admin-nav.ejs') %>
+<%- include('./partials/admin-user-modal.ejs') %>
+<% if (users.exercises) { %>
+    <%- include('./partials/my-exercise-log.ejs') %>
+<% } %>
+<script defer src="/assets/javascript/admin.js"></script>

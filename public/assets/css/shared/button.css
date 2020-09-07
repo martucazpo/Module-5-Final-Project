@@ -100,3 +100,46 @@
     color: black;
     background-color: darkgray;
 }
+
+.table-btn {
+    background-color: white;
+    font-size: inherit;
+    width: 100%;
+}
+
+.table-btn:hover {
+    background-color: lightgray;
+}
+
+.table-btn:focus {
+    background-color: darkgray;
+}
+
+.update-user-btn, .user-delete-btn {
+    margin-bottom: 0.5em;
+    color: white;
+    background-color: black;
+}
+
+.update-user-btn:hover, .user-delete-btn:hover {
+    background-color: darkgray;
+}
+
+.update-user-btn:focus, .user-delete-btn:focus {
+    background-color: darkgray;
+    color: white;
+}
+
+.admin-exercise-update-btn {
+    font-size: inherit;
+    width: 100%;
+    background-color: white;
+}
+
+.admin-exercise-update-btn:hover {
+    background-color: lightgray;
+}
+
+.admin-exercise-update-btn:focus {
+    background-color: darkgray;
+}
