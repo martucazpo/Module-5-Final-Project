@@ -75,3 +75,28 @@
     color: black;
     background-color: darkgray;
 }
+
+.admin-landing-nav-btn {
+    background-color: lightgray;
+    color: white;
+    border: 1px solid white;
+}
+
+.admin-landing-nav-btn:focus {
+    color: black;
+    background-color: white;
+}
+
+.admin-btn {
+    background-color: black;
+    color: white;
+}
+
+.admin-btn:hover {
+    background-color: darkgray;
+}
+
+.admin-btn:focus {
+    color: black;
+    background-color: darkgray;
+}

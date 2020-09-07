@@ -37,12 +37,14 @@ router.post('/:id', ensureAuthenticated, (req, res) => {
                     let name = data.name;
                     let exercises = data.exercises;
                     let showLog = "display";
+                    let showErrs = "hidden";
                     res.render('layouts/site/user-landing.ejs', {
                         name,
                         id,
                         exercises,
                         moment,
-                        showLog
+                        showLog,
+                        showErrs
                     });
                 }
             });
@@ -83,12 +85,14 @@ router.get('/exercise-delete/:id', (req, res) => {
                             let name = data.name;
                             let exercises = data.exercises;
                             let showLog = "display";
+                            let showErrs = "hidden";
                             res.render('layouts/site/user-landing.ejs', {
                                 name,
                                 id,
                                 exercises,
                                 moment,
-                                showLog
+                                showLog,
+                                showErrs
                             });
                         }
                     });

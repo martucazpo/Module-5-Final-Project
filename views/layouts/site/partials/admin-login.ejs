@@ -1,0 +1,21 @@
+<div id="AdminLoginDiv" class="registration-form-div admin-login-modal">
+    <div class="close-modal">
+        <a id="adminLoginModalAnchor" class="modal-anchor" href="#">
+            <span></span>
+            <span></span></a>
+    </div>
+    <h1>Admin Area</h1>
+    <form id="adminLoginForm" method="POST" action="">
+        <div class="form-input-div">
+            <input type="password" name="password" placeholder="password" required />
+        </div>
+        <div class="form-input-div form-submit-btn-div">
+            <button id="loginBtn" type="submit" class="btn registration-form-submit-btn admin-btn">Login</button>
+        </div>
+    </form>
+    <div id="logErrsDiv" class="registration-errors-div <%= showErrs %>">
+        <% if(typeof message !== 'undefined' ) { %>
+        <p><%= message %></p>
+        <% } %>
+    </div>
+</div>

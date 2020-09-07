@@ -2,8 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const exTableModalAnchor = document.getElementById("exTableModalAnchor");
     const exTableModal = document.getElementById("exTableModal");
     const myExercisesBtn = document.getElementById("myExercisesBtn");
+    const adminLoginModalAnchor = document.getElementById("adminLoginModalAnchor");
+    const adminLoginModalDiv = document.getElementById("adminLoginModalDiv");
+    const adminLandingNavBtn = document.getElementById("adminLandingNavBtn");
     const exerciseEditBtn = document.getElementsByClassName("exercise-update-btn");
     const exerciseUpdateModal = document.getElementsByClassName("exercise-update-wrapper");
+
+    adminLandingNavBtn.addEventListener('click', () => {
+        showHidden(adminLoginModalDiv, "hidden", "display");
+    });
+
+    adminLoginModalAnchor.addEventListener('click', () => {
+        showHidden(adminLoginModalDiv, "display", "hidden");
+    });
 
     exTableModalAnchor.addEventListener('click', () => {
         closeModals(exerciseUpdateModal);

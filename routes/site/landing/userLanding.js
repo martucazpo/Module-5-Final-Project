@@ -15,7 +15,8 @@ router.get('/user-landing', ensureAuthenticated, (req, res) => {
             let id = data._id;
             let exercises = data.exercises;
             let showLog = "hidden";
-            res.render('layouts/site/user-landing.ejs', { name, id, exercises, moment, showLog });
+            let showErrs = "hidden";
+            res.render('layouts/site/user-landing.ejs', { name, id, exercises, moment, showLog, showErrs });
         }
     });
 });
@@ -45,7 +46,8 @@ router.post('/user-exercises/:id', ensureAuthenticated, (req, res) => {
                             let name = data.name;
                             let exercises = data.exercises;
                             let showLog = "hidden";
-                            res.render('layouts/site/user-landing.ejs', {name, id, exercises, moment, showLog });
+                            let showErrs ="hidden";
+                            res.render('layouts/site/user-landing.ejs', {name, id, exercises, moment, showLog, showErrs });
                         }
                     });
                 }
