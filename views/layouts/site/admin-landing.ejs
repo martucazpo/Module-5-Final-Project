@@ -1,6 +1,12 @@
 <%- include('./partials/admin-nav.ejs') %>
-<%- include('./partials/admin-user-modal.ejs') %>
-<% if (users.exercises) { %>
+<div class="admin-log-wrapper">
+<div class="admin-ex-modal <%= showLog %>">
+<% if ( exerciseModal === "yes" ) { %>
     <%- include('./partials/my-exercise-log.ejs') %>
 <% } %>
+</div>
+<div class="admin-main-modal">
+<%- include('./partials/admin-user-modal.ejs') %>
+</div>
+</div>
 <script defer src="/assets/javascript/admin.js"></script>
